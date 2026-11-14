@@ -10,7 +10,7 @@
 }
 p{
     color: var(--bleu-nuit);
-    background-color: var(--blanc);
+    background-color: transparent;
 }
 
 * {
@@ -22,7 +22,7 @@ body {
   font-family: "Nunito", Arial, Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: var(--blanc);
+  background-color: var(--bleu-clair);
   color: var(--bleu-nuit);
 }
 
@@ -32,23 +32,19 @@ h3 {
   font-family: Arial;
 }
 
-img {
-  width: 100px;
-  height: 100px;
-}
 
 header {
   background-color: var(--bleu-roi);
   color: var(--blanc);
-  padding: 10px 10px;
+  padding: 2px 2px;
   text-align: center;
 }
 
 header .logo{
-  height: 70px;
+  float: none;
   width: 100px;
-  margin-bottom: 10px;
-
+  height: 70px;
+  margin: 0;
 }
 
 header h1 {
@@ -67,17 +63,16 @@ nav a {
   color: var(--blanc);
   padding: 8px 14px;
   border-radius: 4px;
+  text-decoration: none;
 }
-
 
 nav a[aria-current="page"] {
   font-weight: bold;
-  border-bottom: 3px solid var(--jaune-patte);
 }
 
 main section {
   padding: 40px 20px;
-  background-color: var(--blanc);
+  background-color: transparent;
   color: var(--bleu-nuit);
 }
 
@@ -86,17 +81,21 @@ main a {
   text-decoration: underline;
 }
 
-body.badge {
-width: 40px;
-height: 30px;
-  background-color: var(--vert);
-  color: var(--bleu-nuit);
+/*.badge {
+  size:2px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
   font-weight: bold;
-  padding: 8px 10px;
+  padding: 2px 6px;
   border-radius: 100px;
+}*/
 
+.badge {
+  width: 100px;
+  height: 100px;
+ 
 }
-
 footer {
   background-color: var(--bleu-roi);
   color: var(--blanc);
@@ -110,11 +109,126 @@ footer a {
 
 header .site-titre{
     background-color: var(--bleu-roi);
-    font-size: 70px;
+    font-size: 60px;
     font-family: times new roman;
     color: var(--orange);
 }
 
-.toilettage-complet{
-
+img.logo{
+  float:left;
+  margin :0 10px 10px 0;
+  
 }
+.titre-faq {
+  color: var(--orange);
+  font-size: 30px;
+  font-family: "Times New Roman", serif;
+  text-align: center;
+}
+
+header .telephone {
+  background-color: var(--bleu-roi);
+  color: var(--blanc);
+}
+
+.entete-identite {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  width: 100%;
+  padding: 8px 16px;
+}
+
+.entete-identite .logo {
+  float: none;
+  flex: 0 0 80px;
+  width: 80px;
+  height: 70px;
+  margin: 0;
+  object-fit: contain;
+}
+
+.entete-texte {
+  text-align: left;
+}
+
+header .site-titre,
+header .telephone {
+  margin: 0;
+}
+
+header .telephone {
+  font-size: 0.85rem;
+  color: var(--blanc);
+  background-color: transparent;
+}
+.titre-prestations {
+  color: var(--orange);
+  font-size: 40px;
+  font-family: "Times New Roman", serif;
+  text-align: center;
+}
+.bouton-telephone {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 20px 36px;
+  background-color: var(--orange);
+  color: var(--bleu-nuit);
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.bouton-telephone:hover {
+  background-color: var(--jaune-patte);
+}
+.note-reservation {
+  margin: 0 auto 28px;
+  padding: 0;
+  color: var(--bleu-nuit);
+  background: transparent;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.prestations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.prestations-grid > div {
+  padding: 24px;
+  background-color: var(--blanc);
+  border: 2px solid var(--bleu-roi);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb;
+  text-align: center;
+}
+
+.carte-prestation {
+  padding: 24px;
+  background-color: var(--blanc);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb;
+  text-align: center;
+}
+
+.carte-prestation img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .prestations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
