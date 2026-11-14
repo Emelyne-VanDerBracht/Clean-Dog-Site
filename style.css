@@ -1,233 +1,262 @@
-:root {
-  --bleu-roi: #1F3C9E;
-  --bleu-nuit: #14235A;
-  --blanc: #FFFFFF;
-  --orange: #F4A340;
-  --jaune-patte: #FFD166;
-  --bleu-clair: #EAF0FF;
-  --vert: #B7D98B;
 
+:root {
+    --bleu-roi: #1F3C9E;
+    --bleu-nuit: #14235A;
+    --blanc: #FFFFFF;
+    --orange: #F4A340;
+    --jaune-patte: #FFD166;
+    --bleu-clair: #EAF0FF;
+    --vert: #B7D98B;
 }
-p{
-    color: var(--bleu-nuit);
-    background-color: transparent;
-}
+
+/* Réglages généraux */
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: "Nunito", Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  background-color: var(--bleu-clair);
-  color: var(--bleu-nuit);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: var(--bleu-clair);
+    color: var(--bleu-nuit);
 }
 
-h1,
-h2,
-h3 {
-  font-family: Arial;
+h1, h2, h3 {
+    font-family: "Times New Roman", serif;
 }
 
+p {
+    color: var(--bleu-nuit);
+}
+
+/* En-tête */
 
 header {
-  background-color: var(--bleu-roi);
-  color: var(--blanc);
-  padding: 2px 2px;
-  text-align: center;
-}
-
-header .logo{
-  float: none;
-  width: 100px;
-  height: 70px;
-  margin: 0;
-}
-
-header h1 {
-  margin: 0 0 10px;
-  font-size: 2.5rem;
-  color: var(--orange);
-}
-
-nav ul {
-  gap: 15px;
-  margin: 15px 0 0;
-  padding: 0;
-}
-
-nav a {
-  color: var(--blanc);
-  padding: 8px 14px;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-nav a[aria-current="page"] {
-  font-weight: bold;
-}
-
-main section {
-  padding: 40px 20px;
-  background-color: transparent;
-  color: var(--bleu-nuit);
-}
-
-main a {
-  color: var(--bleu-roi);
-  text-decoration: underline;
-}
-
-/*.badge {
-  size:2px;
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.75rem;
-  font-weight: bold;
-  padding: 2px 6px;
-  border-radius: 100px;
-}*/
-
-.badge {
-  width: 100px;
-  height: 100px;
- 
-}
-footer {
-  background-color: var(--bleu-roi);
-  color: var(--blanc);
-  padding: 20px;
-  text-align: center;
-}
-
-footer a {
-  color: var(--blanc);
-}
-
-header .site-titre{
     background-color: var(--bleu-roi);
-    font-size: 60px;
-    font-family: times new roman;
-    color: var(--orange);
-}
-
-img.logo{
-  float:left;
-  margin :0 10px 10px 0;
-  
-}
-.titre-faq {
-  color: var(--orange);
-  font-size: 30px;
-  font-family: "Times New Roman", serif;
-  text-align: center;
-}
-
-header .telephone {
-  background-color: var(--bleu-roi);
-  color: var(--blanc);
+    color: var(--blanc);
+    padding: 10px;
+    text-align: center;
 }
 
 .entete-identite {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 16px;
-  width: 100%;
-  padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 16px;
 }
 
 .entete-identite .logo {
-  float: none;
-  flex: 0 0 80px;
-  width: 80px;
-  height: 70px;
-  margin: 0;
-  object-fit: contain;
+    width: 80px;
+    height: 70px;
+    object-fit: contain;
 }
 
 .entete-texte {
-  text-align: left;
+    text-align: left;
 }
 
-header .site-titre,
-header .telephone {
-  margin: 0;
+header .site-titre {
+    margin: 0;
+    font-family: "Times New Roman", serif;
+    font-size: 2rem;
+    color: var(--orange);
 }
 
 header .telephone {
-  font-size: 0.85rem;
-  color: var(--blanc);
-  background-color: transparent;
+    margin: 0;
+    color: var(--blanc);
 }
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+nav a {
+    color: var(--blanc);
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    background-color: var(--bleu-nuit);
+    font-weight: bold;
+}
+
+/* Contenu principal */
+
+main {
+    padding: 25px 20px;
+}
+
+main section {
+    padding: 20px;
+}
+
+/* Titres */
+
+.titre-faq,
 .titre-prestations {
-  color: var(--orange);
-  font-size: 40px;
-  font-family: "Times New Roman", serif;
-  text-align: center;
+    color: var(--orange);
+    text-align: center;
 }
+
+.titre-faq {
+    font-size: 30px;
+}
+
+.titre-prestations {
+    font-size: 40px;
+}
+
+/* Image de la page d'accueil */
+
+.badge {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 20px auto;
+}
+
+/* Bouton téléphone */
+
 .bouton-telephone {
-  display: block;
-  width: fit-content;
-  margin: 20px auto;
-  padding: 20px 36px;
-  background-color: var(--orange);
-  color: var(--bleu-nuit);
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 10px;
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 15px 30px;
+    background-color: var(--orange);
+    color: var(--bleu-nuit);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
 }
 
 .bouton-telephone:hover {
-  background-color: var(--jaune-patte);
+    background-color: var(--jaune-patte);
 }
+
 .note-reservation {
-  margin: 0 auto 28px;
-  padding: 0;
-  color: var(--bleu-nuit);
-  background: transparent;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
+
+/* Grille des prestations */
+
 .prestations-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .prestations-grid > div {
-  padding: 24px;
-  background-color: var(--blanc);
-  border: 2px solid var(--bleu-roi);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgb;
-  text-align: center;
+    padding: 24px;
+    background-color: var(--blanc);
+    border: 2px solid var(--bleu-roi);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.carte-prestation {
-  padding: 24px;
-  background-color: var(--blanc);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgb;
-  text-align: center;
+.prestations-grid img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
 }
 
-.carte-prestation img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
+/* Page mentions légales */
+
+.contenu-page {
+    max-width: 900px;
+    margin: 0 auto;
 }
+
+.hero-page {
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--bleu-roi);
+    font-weight: bold;
+}
+
+.sous-titre {
+    color: var(--orange);
+}
+
+.carte {
+    margin-bottom: 20px;
+    padding: 24px;
+    background-color: var(--blanc);
+    border-radius: 12px;
+}
+
+/* Liens dans le contenu */
+
+main a {
+    color: var(--bleu-roi);
+}
+
+/* Pied de page */
+
+footer {
+    background-color: var(--bleu-roi);
+    color: var(--blanc);
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    color: var(--blanc);
+}
+
+footer a {
+    color: var(--blanc);
+}
+
+/* Adaptation aux téléphones */
 
 @media (max-width: 600px) {
-  .prestations-grid {
-    grid-template-columns: 1fr;
-  }
+
+    .prestations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header .site-titre {
+        font-size: 1.6rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    .titre-prestations {
+        font-size: 30px;
+    }
+
+    .bouton-telephone {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
 }
