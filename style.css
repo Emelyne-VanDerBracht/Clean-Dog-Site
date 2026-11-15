@@ -295,6 +295,40 @@ footer a {
     }
 
     .faq-question {
-    margin-bottom: 30px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 12px;
+        margin-bottom: 15px;
+        padding: 18px 22px;
     }
+
+    .faq-question summary {
+        font-weight: bold;
+        cursor: pointer;
+        list-style: none;
+        position: relative;
+        padding-right: 30px;
+    }
+
+    .faq-question summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .faq-question summary::after {
+        content: "+";
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 22px;
+    }
+
+    .faq-question[open] summary::after {
+        content: "−";
+    }
+
+    .faq-question p {
+        margin-top: 18px;
+        line-height: 1.7;
+    }
+
 }
