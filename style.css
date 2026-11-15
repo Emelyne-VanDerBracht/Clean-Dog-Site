@@ -1,3 +1,4 @@
+
 :root {
     --bleu-roi: #1F3C9E;
     --bleu-nuit: #14235A;
@@ -292,5 +293,8 @@ footer a {
         font-size: 1rem;
         padding: 12px 20px;
     }
-}
 
+    .faq-question {
+    margin-bottom: 30px;
+    }
+}
